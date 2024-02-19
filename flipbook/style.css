@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "GothicHandDirty.ttf";
+    background-color: powderblue;
+}
+
+.book {
+    position: relative;
+    width: 21%;
+    height: 50%;
+    transition: transform 0.5s;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front,
+.back {
+    background-image: url(images/pages.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+    border-radius: 2%;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid rgb(70, 32, 1);
+}
+
+.back {
+    z-index: 0;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+}
+
+#f1 {
+    background-image: url(images/desktop-wallpaper-old-book-book-cover-thumbnail.jpg);
+    background-size: cover;
+    border-radius: 2%;
+}
+
+#b3 {
+    background-image: url(images/desktop-wallpaper-old-book-book-cover-thumbnail.rotate.png);
+    border-radius: 2%;
+    background-size: cover;
+}
+
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    display: block;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+h1 {
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgb(36, 34, 34);
+    font-size: 40px;
+    white-space: nowrap;
+    color: #880808;
+    font-weight: normal;
+    height: 30px;
+}
+
+#b1 button {
+    color: #000000;
+    border: none;
+    padding: 0x;
+    border-radius: 0px;
+    opacity: 0;
+}
+
+#userInput {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 15%;
+    background-color: transparent;
+    font-size: 40px;
+    font-family: "GothicHandDirty.ttf";
+}
+
+#userInput:focus {
+    outline: none;
+}
+
+#final-num {
+    animation: fadeIn 5s;
+    transition: transform 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 span {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeInLetter 3s forwards;
+    /* Apply animation */
+    animation-delay: calc(0.1s * var(--index));
+    /* Delay each letter */
+}
+
+@keyframes fadeInLetter {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@font-face {
+    font-family: "GothicHandDirty.ttf";
+    src: url('fonts/Bait\ Pertama\ Regular.ttf');
+}
+
+#calculation4 {
+    margin-left: 37%;
+    display: none;
+}
+
+#calculation3 {
+    margin-left: 25%;
+    margin-top: -2%;
+    display: none;
+}
+
+#calculation2 {
+    font-size: 40px;
+    margin-left: 24%;
+    display: none;
+}
+
+#calculation1 {
+    margin: none;
+    display: none;
+}
+
+#text-one {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px;
+    margin-left: 10%;
+    margin-top: 11%;
+}
+
+.tile {
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #880808;
+    text-shadow: 0.5px 0.5px 2px rgb(36, 34, 34);
+    transition: 15s ease;
+}
+
+
+#tile1 {
+    border-left: none;
+    border-top: none;
+    opacity: 0;
+    transition: opacity 2s; 
+}
+
+#tile2 {
+    border-top: none;
+    opacity: 0;
+    transition: opacity 2s; 
+}
+
+#tile3 {
+    border-top: none;
+    border-right: none;
+    opacity: 0;
+    transition: opacity 2s; 
+}
+
+#tile4 {
+    border-left: none;
+    opacity: 0;
+    transition: opacity 2s; 
+}
+
+#tile5 {
+    opacity: 0;
+    transition: opacity 2s; 
+}
+
+#tile6 {
+    border-right: none;
+    opacity: 0;
+    transition: opacity 2s; 
+}
+
+#tile7 {
+    border-left: none;
+    border-bottom: none;
+    opacity: 0;
+    transition: opacity 2s; 
+}
+
+#tile8 {
+    border-bottom: none;
+    opacity: 0;
+    transition: opacity 2s; 
+}
+
+#tile9 {
+    border-right: none;
+    border-bottom: none;
+    opacity: 0;
+    transition: opacity 2s; 
+}

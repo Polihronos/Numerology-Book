@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <script src="https://kit.fontawesome.com/39cca30d71.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="prev-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <div id="book" class="book">
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <h1>Book cover</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+                    <h1 id="text-one">19 09 1999 is mine . Yours? </h1>
+                    <input type="text" id="userInput" spellcheck="false">
+                    <button id="submit-button" onclick="getUserInput()">Submit</button>
+                    <p id="result"></p>
+                    <h1 id="calculation1"></h1>
+                    <h1 id="calculation2"></h1>
+                    <h1 id="calculation3"> -----</h1>
+                    <h1 id="calculation4"></h1>
+                    <section class="container" id="container1">
+                        <div class="tile" id="tile1">  </div>
+                        <div class="tile" id="tile2">  </div>
+                        <div class="tile" id="tile3">  </div>
+                        <div class="tile" id="tile4">  </div>
+                        <div class="tile" id="tile5">  </div>
+                        <div class="tile" id="tile6">  </div>
+                        <div class="tile" id="tile7">  </div>
+                        <div class="tile" id="tile8">  </div>
+                        <div class="tile" id="tile9">  </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="f2" class="front-content">
+                    <p>the final num is: </p>
+                    <p id="final-num"></p>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b2" class="back-content">
+                    <h1>Kaka</h1>
+                </div>
+            </div>
+        </div>
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="f3" class="front-content">
+                    <h1>Aka</h1>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b3" class="back-content">
+                    <h1>The end</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="next-btn">
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</body>
+
+</html>
